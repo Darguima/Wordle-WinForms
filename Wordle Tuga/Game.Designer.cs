@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
             this.group_tutorial = new System.Windows.Forms.GroupBox();
             this.bt_sair = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -69,7 +70,7 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::Wordle_Tuga.Properties.Resources.Wordle;
+            this.pictureBox1.Image = global::Wordle_Tuga.Properties.Resources.wordleLogo;
             this.pictureBox1.Location = new System.Drawing.Point(14, 21);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(585, 165);
@@ -147,6 +148,7 @@
             this.ClientSize = new System.Drawing.Size(609, 621);
             this.Controls.Add(this.group_home);
             this.Controls.Add(this.group_tutorial);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(625, 660);
             this.Name = "Game";
             this.Text = "Wordle";
