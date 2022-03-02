@@ -31,16 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
             this.group_home = new System.Windows.Forms.GroupBox();
             this.lbl_1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bt_homeTutorial = new System.Windows.Forms.Button();
             this.txt_nickname = new System.Windows.Forms.TextBox();
             this.bt_homeStart = new System.Windows.Forms.Button();
             this.group_game = new System.Windows.Forms.GroupBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.group_tutorial = new System.Windows.Forms.GroupBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.bt_tutorialSair = new System.Windows.Forms.Button();
             this.group_options = new System.Windows.Forms.GroupBox();
             this.radio_optionsTempo = new System.Windows.Forms.RadioButton();
             this.radio_optionsTentativas = new System.Windows.Forms.RadioButton();
@@ -49,18 +44,33 @@
             this.num_optionsLetras = new System.Windows.Forms.NumericUpDown();
             this.num_optionsTentativas = new System.Windows.Forms.NumericUpDown();
             this.bt_optionsStart = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.bt_optionsSair = new System.Windows.Forms.Button();
+            this.bt_tutorialSair = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.group_tutorial = new System.Windows.Forms.GroupBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.group_home.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.group_game.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.group_tutorial.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.group_options.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_optionsLetras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_optionsTentativas)).BeginInit();
+            this.group_tutorial.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // group_home
@@ -89,18 +99,6 @@
             this.lbl_1.TabIndex = 4;
             this.lbl_1.Text = "Nickname";
             this.lbl_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::Wordle_Tuga.Properties.Resources.wordleLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(14, 21);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(585, 165);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // bt_homeTutorial
             // 
@@ -154,18 +152,6 @@
             this.group_game.TabStop = false;
             this.group_game.Visible = false;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Image = global::Wordle_Tuga.Properties.Resources.wordleLogo;
-            this.pictureBox3.Location = new System.Drawing.Point(14, 21);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(585, 165);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -174,44 +160,6 @@
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
-            // 
-            // group_tutorial
-            // 
-            this.group_tutorial.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.group_tutorial.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.group_tutorial.Controls.Add(this.pictureBox2);
-            this.group_tutorial.Controls.Add(this.bt_tutorialSair);
-            this.group_tutorial.Location = new System.Drawing.Point(-2, -9);
-            this.group_tutorial.Name = "group_tutorial";
-            this.group_tutorial.Size = new System.Drawing.Size(612, 639);
-            this.group_tutorial.TabIndex = 10;
-            this.group_tutorial.TabStop = false;
-            this.group_tutorial.Visible = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox2.Image = global::Wordle_Tuga.Properties.Resources.tutorialImage;
-            this.pictureBox2.InitialImage = null;
-            this.pictureBox2.Location = new System.Drawing.Point(14, 50);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(442, 568);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // bt_tutorialSair
-            // 
-            this.bt_tutorialSair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bt_tutorialSair.Location = new System.Drawing.Point(524, 21);
-            this.bt_tutorialSair.Name = "bt_tutorialSair";
-            this.bt_tutorialSair.Size = new System.Drawing.Size(75, 23);
-            this.bt_tutorialSair.TabIndex = 0;
-            this.bt_tutorialSair.Text = "Sair";
-            this.bt_tutorialSair.UseVisualStyleBackColor = true;
-            this.bt_tutorialSair.Click += new System.EventHandler(this.bt_tutorialSair_Click);
             // 
             // group_options
             // 
@@ -349,18 +297,6 @@
             this.bt_optionsStart.UseVisualStyleBackColor = false;
             this.bt_optionsStart.Click += new System.EventHandler(this.bt_optionsStart_Click);
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.Image = global::Wordle_Tuga.Properties.Resources.wordleLogo;
-            this.pictureBox4.Location = new System.Drawing.Point(14, 21);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(585, 165);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 6;
-            this.pictureBox4.TabStop = false;
-            // 
             // bt_optionsSair
             // 
             this.bt_optionsSair.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -374,15 +310,171 @@
             this.bt_optionsSair.UseVisualStyleBackColor = false;
             this.bt_optionsSair.Click += new System.EventHandler(this.bt_optionsSair_Click);
             // 
+            // bt_tutorialSair
+            // 
+            this.bt_tutorialSair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bt_tutorialSair.Location = new System.Drawing.Point(524, 21);
+            this.bt_tutorialSair.Name = "bt_tutorialSair";
+            this.bt_tutorialSair.Size = new System.Drawing.Size(75, 23);
+            this.bt_tutorialSair.TabIndex = 0;
+            this.bt_tutorialSair.Text = "Sair";
+            this.bt_tutorialSair.UseVisualStyleBackColor = true;
+            this.bt_tutorialSair.Click += new System.EventHandler(this.bt_tutorialSair_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(21, 75);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(433, 18);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Descobre o palavra em algumas tentativas ou em contra relógio.";
+            // 
+            // group_tutorial
+            // 
+            this.group_tutorial.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.group_tutorial.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.group_tutorial.Controls.Add(this.pictureBox6);
+            this.group_tutorial.Controls.Add(this.pictureBox5);
+            this.group_tutorial.Controls.Add(this.pictureBox2);
+            this.group_tutorial.Controls.Add(this.label8);
+            this.group_tutorial.Controls.Add(this.label7);
+            this.group_tutorial.Controls.Add(this.label6);
+            this.group_tutorial.Controls.Add(this.label5);
+            this.group_tutorial.Controls.Add(this.label4);
+            this.group_tutorial.Controls.Add(this.label3);
+            this.group_tutorial.Controls.Add(this.bt_tutorialSair);
+            this.group_tutorial.Location = new System.Drawing.Point(-2, -9);
+            this.group_tutorial.Name = "group_tutorial";
+            this.group_tutorial.Size = new System.Drawing.Size(612, 639);
+            this.group_tutorial.TabIndex = 10;
+            this.group_tutorial.TabStop = false;
+            this.group_tutorial.Visible = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.Image = global::Wordle_Tuga.Properties.Resources.wordleLogo;
+            this.pictureBox3.Location = new System.Drawing.Point(14, 21);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(585, 165);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(14, 21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(585, 165);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.Image = global::Wordle_Tuga.Properties.Resources.wordleLogo;
+            this.pictureBox4.Location = new System.Drawing.Point(14, 21);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(585, 165);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 6;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(21, 111);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(476, 47);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Escolhe o número de letrs da palavra, e caso jogues com tentativas, o número das " +
+    "mesmas.";
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(21, 171);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(476, 47);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Depois de cada tentativa, a cor dos quadrados irá mudar de acordo com os seguinte" +
+    "s exemplos:";
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(30, 267);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(311, 20);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "A letra T está na palavra e na posição correta.";
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(30, 387);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(331, 20);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "A letra S está na palavra, mas na posição errada.";
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(30, 510);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(229, 20);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "A letra E não faz parte da palavra.";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Wordle_Tuga.Properties.Resources.tutorialImage1;
+            this.pictureBox2.Location = new System.Drawing.Point(33, 290);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(317, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::Wordle_Tuga.Properties.Resources.tutorialImage2;
+            this.pictureBox5.Location = new System.Drawing.Point(33, 410);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(317, 50);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 8;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Wordle_Tuga.Properties.Resources.tutorialImage3;
+            this.pictureBox6.Location = new System.Drawing.Point(33, 533);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(317, 50);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 9;
+            this.pictureBox6.TabStop = false;
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(609, 621);
+            this.Controls.Add(this.group_tutorial);
             this.Controls.Add(this.group_game);
             this.Controls.Add(this.group_home);
             this.Controls.Add(this.group_options);
-            this.Controls.Add(this.group_tutorial);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -391,17 +483,20 @@
             this.Text = "Wordle";
             this.group_home.ResumeLayout(false);
             this.group_home.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.group_game.ResumeLayout(false);
             this.group_game.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.group_tutorial.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.group_options.ResumeLayout(false);
             this.group_options.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_optionsLetras)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_optionsTentativas)).EndInit();
+            this.group_tutorial.ResumeLayout(false);
+            this.group_tutorial.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -417,9 +512,6 @@
         private System.Windows.Forms.GroupBox group_game;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox group_tutorial;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button bt_tutorialSair;
         private System.Windows.Forms.GroupBox group_options;
         private System.Windows.Forms.RadioButton radio_optionsTempo;
         private System.Windows.Forms.RadioButton radio_optionsTentativas;
@@ -430,6 +522,17 @@
         private System.Windows.Forms.Button bt_optionsStart;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button bt_optionsSair;
+        private System.Windows.Forms.Button bt_tutorialSair;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox group_tutorial;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }
 
