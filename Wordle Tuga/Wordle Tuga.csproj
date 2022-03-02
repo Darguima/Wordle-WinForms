@@ -85,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />
+    <None Include="Resources\tutorialImage.PNG" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\wordleLogo.png" />

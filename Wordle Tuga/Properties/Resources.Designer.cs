@@ -63,6 +63,16 @@ namespace Wordle_Tuga.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap tutorialImage {
+            get {
+                object obj = ResourceManager.GetObject("tutorialImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap wordleLogo {
             get {
                 object obj = ResourceManager.GetObject("wordleLogo", resourceCulture);
