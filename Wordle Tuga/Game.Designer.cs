@@ -277,12 +277,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.num_optionsLetras.Location = new System.Drawing.Point(251, 336);
             this.num_optionsLetras.Maximum = new decimal(new int[] {
-            6,
+            7,
             0,
             0,
             0});
             this.num_optionsLetras.Minimum = new decimal(new int[] {
-            3,
+            4,
             0,
             0,
             0});
@@ -486,10 +486,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(609, 621);
-            this.Controls.Add(this.group_game);
-            this.Controls.Add(this.group_home);
             this.Controls.Add(this.group_options);
             this.Controls.Add(this.group_tutorial);
+            this.Controls.Add(this.group_game);
+            this.Controls.Add(this.group_home);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;

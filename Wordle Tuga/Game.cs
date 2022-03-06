@@ -12,6 +12,8 @@ namespace Wordle_Tuga
 {
     public partial class Game : Form
     {
+        Words words = new Words();
+
         List<String> triedWords  = new List<String>();
         String currentWordTry = "";
         List<Label> currentLabelsTry = new List<Label>();
@@ -139,9 +141,20 @@ namespace Wordle_Tuga
                 {
                     if (currentWordTry.Length == lettersAmount)
                     {
-                        triedWords.Add(currentWordTry);
-                        generateNewWordTry();
-
+                        if (triedWords.Contains(currentWordTry))
+                        {
+                            MessageBox.Show("Word already tried!");
+                            return;
+                        }
+                        else if (!words.wordExists(currentWordTry))
+                        {
+                            MessageBox.Show("Word not exists!");
+                            return;
+                        }
+                        else {
+                            triedWords.Add(currentWordTry);
+                            generateNewWordTry();
+                        }
                     }
                 }
             }

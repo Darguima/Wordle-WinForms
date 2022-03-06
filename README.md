@@ -15,20 +15,24 @@ This game is the final project created to a subject at my High School. `Wordle T
 	<img src="./assets/GamePage.jpg" width="350px"/>
 </p>
 
-### Scripts
-#### `wordsScraper.py`
+### Requirements
+
+1. Install `Newtonsoft.Json` on NuGet.
+
+#### Scripts
+##### `wordsScraper.py`
 
 In order to get a big list of portuguese words I developed a Python script to scrape them from a site.
 
 <img src="./assets/wordsScrapper.png" width="250px"/>
 
-##### Dependencies
+###### Dependencies
 
 ```console
 $ pip install unidecode beautifulsoup4
 ```
 
-##### Run
+###### Run
 
 ```console
 $ python scripts/wordsScraper.py
