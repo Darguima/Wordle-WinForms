@@ -17,6 +17,8 @@ namespace Wordle_Tuga
 
     internal class Words
     {
+        Random rnd = new Random();
+
         private readonly List<String> four = new List<String>();
         private readonly List<String> five = new List<String>();
         private readonly List<String> six = new List<String>();
@@ -37,7 +39,14 @@ namespace Wordle_Tuga
 
         public bool wordExists (string word)
         {
-            return this.getWordsList(word.Length).Contains(word);
+            return this.getWordsList(word.Length).Contains(word.ToLower());
+        }
+
+        public string randomWord (int amountOfLetters)
+        {
+            var getWordsList = this.getWordsList(amountOfLetters);
+
+            return getWordsList[rnd.Next(0, getWordsList.Count)].ToUpper();
         }
 
         public Words()

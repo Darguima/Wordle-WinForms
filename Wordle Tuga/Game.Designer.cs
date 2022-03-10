@@ -36,6 +36,7 @@
             this.txt_nickname = new System.Windows.Forms.TextBox();
             this.bt_homeStart = new System.Windows.Forms.Button();
             this.group_game = new System.Windows.Forms.GroupBox();
+            this.bt_gameSair = new System.Windows.Forms.Button();
             this.scroll_game = new System.Windows.Forms.Panel();
             this.line = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -60,6 +61,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.group_winner = new System.Windows.Forms.GroupBox();
+            this.bt_winnerVoltar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.lb_winnerWord = new System.Windows.Forms.Label();
             this.group_home.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.group_game.SuspendLayout();
@@ -72,6 +78,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.group_winner.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // group_home
@@ -136,7 +144,7 @@
             this.txt_nickname.Name = "txt_nickname";
             this.txt_nickname.Size = new System.Drawing.Size(196, 26);
             this.txt_nickname.TabIndex = 2;
-            this.txt_nickname.Text = "Delete me";
+            this.txt_nickname.Text = "Guest";
             this.txt_nickname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // bt_homeStart
@@ -158,6 +166,7 @@
             this.group_game.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.group_game.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.group_game.Controls.Add(this.bt_gameSair);
             this.group_game.Controls.Add(this.scroll_game);
             this.group_game.Controls.Add(this.line);
             this.group_game.Controls.Add(this.pictureBox3);
@@ -169,12 +178,26 @@
             this.group_game.Visible = false;
             this.group_game.VisibleChanged += new System.EventHandler(this.group_game_VisibleChanged);
             // 
+            // bt_gameSair
+            // 
+            this.bt_gameSair.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bt_gameSair.BackColor = System.Drawing.Color.SeaGreen;
+            this.bt_gameSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_gameSair.Location = new System.Drawing.Point(531, 19);
+            this.bt_gameSair.Name = "bt_gameSair";
+            this.bt_gameSair.Size = new System.Drawing.Size(75, 38);
+            this.bt_gameSair.TabIndex = 11;
+            this.bt_gameSair.Text = "Sair";
+            this.bt_gameSair.UseVisualStyleBackColor = false;
+            this.bt_gameSair.Click += new System.EventHandler(this.bt_gameSair_Click);
+            // 
             // scroll_game
             // 
             this.scroll_game.AutoScroll = true;
-            this.scroll_game.Location = new System.Drawing.Point(6, 76);
+            this.scroll_game.Location = new System.Drawing.Point(54, 76);
             this.scroll_game.Name = "scroll_game";
-            this.scroll_game.Size = new System.Drawing.Size(600, 542);
+            this.scroll_game.Size = new System.Drawing.Size(500, 542);
             this.scroll_game.TabIndex = 3;
             // 
             // line
@@ -478,18 +501,78 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(476, 47);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Escolhe o número de letrs da palavra, e caso jogues com tentativas, o número das " +
-    "mesmas.";
+            this.label4.Text = "Escolhe o número de letras da palavra, e caso jogues com tentativas, o número das" +
+    " mesmas.";
+            // 
+            // group_winner
+            // 
+            this.group_winner.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.group_winner.Controls.Add(this.lb_winnerWord);
+            this.group_winner.Controls.Add(this.bt_winnerVoltar);
+            this.group_winner.Controls.Add(this.label1);
+            this.group_winner.Controls.Add(this.pictureBox7);
+            this.group_winner.Location = new System.Drawing.Point(-2, -9);
+            this.group_winner.Name = "group_winner";
+            this.group_winner.Size = new System.Drawing.Size(612, 639);
+            this.group_winner.TabIndex = 12;
+            this.group_winner.TabStop = false;
+            this.group_winner.Visible = false;
+            // 
+            // bt_winnerVoltar
+            // 
+            this.bt_winnerVoltar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bt_winnerVoltar.BackColor = System.Drawing.Color.SeaGreen;
+            this.bt_winnerVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.bt_winnerVoltar.Location = new System.Drawing.Point(157, 556);
+            this.bt_winnerVoltar.Name = "bt_winnerVoltar";
+            this.bt_winnerVoltar.Size = new System.Drawing.Size(299, 47);
+            this.bt_winnerVoltar.TabIndex = 5;
+            this.bt_winnerVoltar.Text = "Voltar";
+            this.bt_winnerVoltar.UseVisualStyleBackColor = false;
+            this.bt_winnerVoltar.Click += new System.EventHandler(this.bt_winnerVoltar_Click);
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(14, 189);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(585, 78);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Parabéns, acertaste a palavra!!";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox7.Image = global::Wordle_Tuga.Properties.Resources.wordleLogo;
+            this.pictureBox7.Location = new System.Drawing.Point(14, 19);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(585, 165);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 1;
+            this.pictureBox7.TabStop = false;
+            // 
+            // lb_winnerWord
+            // 
+            this.lb_winnerWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_winnerWord.Location = new System.Drawing.Point(102, 323);
+            this.lb_winnerWord.Name = "lb_winnerWord";
+            this.lb_winnerWord.Size = new System.Drawing.Size(408, 42);
+            this.lb_winnerWord.TabIndex = 6;
+            this.lb_winnerWord.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(609, 621);
-            this.Controls.Add(this.group_options);
-            this.Controls.Add(this.group_tutorial);
+            this.Controls.Add(this.group_winner);
             this.Controls.Add(this.group_game);
             this.Controls.Add(this.group_home);
+            this.Controls.Add(this.group_options);
+            this.Controls.Add(this.group_tutorial);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
@@ -513,6 +596,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.group_winner.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -550,6 +635,12 @@
         private System.Windows.Forms.Button bt_tutorialSair;
         private System.Windows.Forms.Label line;
         private System.Windows.Forms.Panel scroll_game;
+        private System.Windows.Forms.GroupBox group_winner;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Button bt_gameSair;
+        private System.Windows.Forms.Button bt_winnerVoltar;
+        private System.Windows.Forms.Label lb_winnerWord;
     }
 }
 

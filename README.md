@@ -8,14 +8,17 @@ This game is the final project created to a subject at my High School. `Wordle T
 
 ###### Technologies used: `C#` & `Windows Forms` & `Python`
 
+#### Don't forget to install the [dependencies](#dependencies)!!
+
 <p align="center">
 	<img src="./assets/LandingPage.jpg" width="350px"/>
 	<img src="./assets/TutorialPage.jpg" width="350px"/>
 	<img src="./assets/OptionsPage.jpg" width="350px"/>
 	<img src="./assets/GamePage.jpg" width="350px"/>
+	<img src="./assets/ScorePage.jpg" width="350px"/>
 </p>
 
-### Requirements
+### Dependencies
 
 1. Install `Newtonsoft.Json` on NuGet.
 

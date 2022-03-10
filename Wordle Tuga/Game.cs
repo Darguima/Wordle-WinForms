@@ -13,6 +13,7 @@ namespace Wordle_Tuga
     public partial class Game : Form
     {
         Words words = new Words();
+        String winnerWord;
 
         List<String> triedWords  = new List<String>();
         String currentWordTry = "";
@@ -78,8 +79,19 @@ namespace Wordle_Tuga
             var groupBox = (GroupBox) sender;
 
             if (groupBox.Visible) {
+                winnerWord = words.randomWord(lettersAmount);
+                MessageBox.Show($"Palavra Certa: {winnerWord}");
+                
                 generateNewWordTry();
             }
+        }
+
+        private void bt_gameSair_Click(object sender, EventArgs e)
+        {
+            group_game.Visible = false;
+            group_home.Visible = true;
+
+            resetGame();
         }
 
         private void generateNewWordTry ()
@@ -87,8 +99,9 @@ namespace Wordle_Tuga
             currentLabelsTry.Clear();
             currentWordTry = "";
 
-            const int LABEL_SIZE = 80;
-            int labelSpacement = (scroll_game.Width - (LABEL_SIZE * lettersAmount)) / (lettersAmount + 1);
+            const int LABEL_SIZE = 62;
+            const int LABEL_SPACEMENT = 8;
+            int lateralSpacement = ((scroll_game.Width - (LABEL_SIZE * lettersAmount)) - (LABEL_SPACEMENT * (lettersAmount - 1))) / 2;
 
             int numbersOfTries = triedWords.Count;
 
@@ -100,12 +113,13 @@ namespace Wordle_Tuga
                     Size = new Size(LABEL_SIZE, LABEL_SIZE),
 
                     TextAlign = ContentAlignment.MiddleCenter,
-                    Font = new Font("Arial", 16),
+                    Font = new Font("Arial", 20, FontStyle.Bold),
 
-                    Location = new Point(labelSpacement + (labelSpacement + LABEL_SIZE) * i, ((LABEL_SIZE + 20) * (numbersOfTries)) - scroll_game.VerticalScroll.Value),
+                    Location = new Point(lateralSpacement + (LABEL_SPACEMENT + LABEL_SIZE) * i, ((LABEL_SIZE + 20) * (numbersOfTries)) - scroll_game.VerticalScroll.Value),
 
                     Text = "",
-                    BackColor = Color.FromArgb(107, 170, 100)
+                    BackColor = Color.FromArgb(255, 255, 255),
+                    BorderStyle = BorderStyle.FixedSingle,
                 };
 
                 scroll_game.Controls.Add(wordLetter);
@@ -113,6 +127,15 @@ namespace Wordle_Tuga
             }
 
             scroll_game.ScrollControlIntoView(currentLabelsTry[0]);
+        }
+
+        private void resetGame ()
+        {
+            triedWords = new List<String>();
+            currentWordTry = "";
+            currentLabelsTry = new List<Label>();
+
+            scroll_game.Controls.Clear();
         }
 
         void Form1_KeyPress(object sender, KeyPressEventArgs e)
@@ -123,8 +146,8 @@ namespace Wordle_Tuga
                 {
                     if (currentWordTry.Length < lettersAmount)
                     {
-                        currentWordTry += e.KeyChar.ToString();
-                        currentLabelsTry[currentWordTry.Length - 1].Text = e.KeyChar.ToString();
+                        currentWordTry += e.KeyChar.ToString().ToUpper();
+                        currentLabelsTry[currentWordTry.Length - 1].Text = e.KeyChar.ToString().ToUpper();
                     }
                 }
 
@@ -143,22 +166,69 @@ namespace Wordle_Tuga
                     {
                         if (triedWords.Contains(currentWordTry))
                         {
-                            MessageBox.Show("Word already tried!");
+                            MessageBox.Show("Palavra já tentada!");
                             return;
                         }
                         else if (!words.wordExists(currentWordTry))
                         {
-                            MessageBox.Show("Word not exists!");
+                            MessageBox.Show("Essa palavra não está na nossa lista!");
                             return;
                         }
                         else {
-                            triedWords.Add(currentWordTry);
-                            generateNewWordTry();
+                            bool wordCorrect = wordScore();
+
+                            if (wordCorrect)
+                            {
+                                lb_winnerWord.Text = winnerWord;
+
+                                resetGame();
+
+                                group_game.Visible = false;
+                                group_winner.Visible = true;
+                            } else
+                            {
+                                triedWords.Add(currentWordTry);
+                                generateNewWordTry();
+                            }
                         }
                     }
                 }
             }
         }
 
+        private bool wordScore ()
+        {
+            bool wordCorrect = true;
+
+            for (int i = 0; i < currentLabelsTry.Count; i++)
+            {
+                Label label = currentLabelsTry[i];
+                label.BorderStyle = BorderStyle.None;
+
+
+                if (label.Text == winnerWord[i].ToString())
+                {
+                    label.BackColor = Color.FromArgb(107, 170, 100);
+                }
+                else if (winnerWord.Contains(label.Text))
+                {
+                    label.BackColor = Color.FromArgb(201, 180, 88);
+                    wordCorrect = false;
+                }
+                else
+                {
+                    label.BackColor = Color.FromArgb(120, 124, 126);
+                    wordCorrect = false;
+                }
+            }
+
+            return wordCorrect;
+        }
+
+        private void bt_winnerVoltar_Click(object sender, EventArgs e)
+        {
+            group_winner.Visible = false;
+            group_home.Visible = true;
+        }
     }
 }
