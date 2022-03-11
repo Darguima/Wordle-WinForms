@@ -12,6 +12,8 @@ namespace Wordle_Tuga
 {
     public partial class Game : Form
     {
+        Statistics statistics = new Statistics();
+
         Words words = new Words();
         String winnerWord;
 
@@ -39,6 +41,9 @@ namespace Wordle_Tuga
         {
             group_home.Visible = false;
             group_options.Visible = true;
+
+            if (txt_nickname.Text == "") txt_nickname.Text = "Guest";
+            statistics.CurrentNickname = txt_nickname.Text;
         }
 
         private void bt_homeTutorial_Click(object sender, EventArgs e)
@@ -220,6 +225,8 @@ namespace Wordle_Tuga
                             lb_winnerWord.Text = $"Palavra certa: {winnerWord}";
 
                             GameTimer.Stop();
+
+                            statistics.storeGame(wordCorrect, triedWords.Count + 1);
 
                             resetGame();
 
