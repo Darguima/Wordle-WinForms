@@ -298,8 +298,12 @@ namespace Wordle_Tuga
                 lb_statsTriesAmount.Text = $"Total de Tentativas: {statistics.currentPlayer.totalAmountTries}";
                 lb_statsLostGames.Text = $"Jogos Perdidos: {statistics.currentPlayer.gamesLost}";
 
-                lb_statsWinGamesPercent.Text = $"{(statistics.currentPlayer.gamesWon * 100) / statistics.currentPlayer.gamesPlayed}%";
-                lb_statsLostGamesPercent.Text = $"{(statistics.currentPlayer.gamesLost * 100) / statistics.currentPlayer.gamesPlayed}%";
+                lb_statsWinGamesPercent.Text = statistics.currentPlayer.gamesPlayed != 0 
+                    ? $"{(statistics.currentPlayer.gamesWon * 100) / statistics.currentPlayer.gamesPlayed}%"
+                    : "0%";
+                lb_statsLostGamesPercent.Text = statistics.currentPlayer.gamesPlayed != 0
+                    ? $"{(statistics.currentPlayer.gamesLost * 100) / statistics.currentPlayer.gamesPlayed}%"
+                    : "0%";
             }
         }
 
