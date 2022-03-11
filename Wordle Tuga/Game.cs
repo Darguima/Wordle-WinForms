@@ -21,10 +21,18 @@ namespace Wordle_Tuga
 
         bool isTimeGame;
         int triesAmount, lettersAmount;
+        float gameTime;
+        
+        Timer GameTimer = new Timer{Interval = (10)};
 
         public Game()
         {
             InitializeComponent();
+ 
+            GameTimer.Tick += new EventHandler((object _, EventArgs __) => {
+                gameTime += 10;
+                lb_gameStatus.Text = $"Tempo: {String.Format("{0:0.00}", gameTime / 600)}";
+            });
         }
 
         private void bt_homeStart_Click(object sender, EventArgs e)
@@ -47,7 +55,7 @@ namespace Wordle_Tuga
 
         private void bt_optionsStart_Click(object sender, EventArgs e)
         {
-            isTimeGame = radio_optionsTentativas.Checked;
+            isTimeGame = radio_optionsTempo.Checked;
 
             triesAmount = (int)num_optionsTentativas.Value;
             lettersAmount = (int)num_optionsLetras.Value;
@@ -80,8 +88,19 @@ namespace Wordle_Tuga
 
             if (groupBox.Visible) {
                 winnerWord = words.randomWord(lettersAmount);
+
+                if (isTimeGame)
+                { 
+                    GameTimer.Start();
+
+                    lb_gameStatus.Text = $"Tempo: {gameTime}";
+                }
+                else
+                {
+                    lb_gameStatus.Text = $"Tentativas: {triedWords.Count} / {triesAmount}";    
+                }
+
                 MessageBox.Show($"Palavra Certa: {winnerWord}");
-                
                 generateNewWordTry();
             }
         }
@@ -135,6 +154,9 @@ namespace Wordle_Tuga
             currentWordTry = "";
             currentLabelsTry = new List<Label>();
 
+            gameTime = 0;
+            GameTimer.Stop();
+
             scroll_game.Controls.Clear();
         }
 
@@ -179,17 +201,30 @@ namespace Wordle_Tuga
 
                             if (wordCorrect)
                             {
-                                lb_winnerWord.Text = winnerWord;
-
-                                resetGame();
-
-                                group_game.Visible = false;
-                                group_winner.Visible = true;
-                            } else
+                                lb_winnerMessage.Text = isTimeGame
+                                ?  $"Parabéns, acertaste em {String.Format("{0:0.00}", gameTime / 600)} segundos e {triedWords.Count + 1} tentativas!!!" 
+                                : $"Parabéns, acertaste em {triedWords.Count + 1} tentativas!!!";
+                            }
+                            else if (!isTimeGame && triesAmount == triedWords.Count + 1)
                             {
+                                lb_winnerMessage.Text = $"Perdeste, excedeste as tuas {triesAmount} tentativas!!!";
+                            }
+                            else
+                            {
+                                lb_gameStatus.Text = $"Tentativas: {triedWords.Count + 1} / {triesAmount}";
                                 triedWords.Add(currentWordTry);
                                 generateNewWordTry();
+                                return;
                             }
+
+                            lb_winnerWord.Text = $"Palavra certa: {winnerWord}";
+
+                            GameTimer.Stop();
+
+                            resetGame();
+
+                            group_game.Visible = false;
+                            group_winner.Visible = true;
                         }
                     }
                 }

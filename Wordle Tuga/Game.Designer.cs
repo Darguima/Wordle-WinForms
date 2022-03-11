@@ -36,6 +36,7 @@
             this.txt_nickname = new System.Windows.Forms.TextBox();
             this.bt_homeStart = new System.Windows.Forms.Button();
             this.group_game = new System.Windows.Forms.GroupBox();
+            this.lb_gameStatus = new System.Windows.Forms.Label();
             this.bt_gameSair = new System.Windows.Forms.Button();
             this.scroll_game = new System.Windows.Forms.Panel();
             this.line = new System.Windows.Forms.Label();
@@ -62,10 +63,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.group_winner = new System.Windows.Forms.GroupBox();
-            this.bt_winnerVoltar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.lb_winnerWord = new System.Windows.Forms.Label();
+            this.bt_winnerVoltar = new System.Windows.Forms.Button();
+            this.lb_winnerMessage = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.group_home.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.group_game.SuspendLayout();
@@ -166,6 +167,7 @@
             this.group_game.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.group_game.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.group_game.Controls.Add(this.lb_gameStatus);
             this.group_game.Controls.Add(this.bt_gameSair);
             this.group_game.Controls.Add(this.scroll_game);
             this.group_game.Controls.Add(this.line);
@@ -177,6 +179,16 @@
             this.group_game.TabStop = false;
             this.group_game.Visible = false;
             this.group_game.VisibleChanged += new System.EventHandler(this.group_game_VisibleChanged);
+            // 
+            // lb_gameStatus
+            // 
+            this.lb_gameStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_gameStatus.Location = new System.Drawing.Point(50, 42);
+            this.lb_gameStatus.Name = "lb_gameStatus";
+            this.lb_gameStatus.Size = new System.Drawing.Size(163, 26);
+            this.lb_gameStatus.TabIndex = 12;
+            this.lb_gameStatus.Text = "...";
+            this.lb_gameStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bt_gameSair
             // 
@@ -509,7 +521,7 @@
             this.group_winner.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.group_winner.Controls.Add(this.lb_winnerWord);
             this.group_winner.Controls.Add(this.bt_winnerVoltar);
-            this.group_winner.Controls.Add(this.label1);
+            this.group_winner.Controls.Add(this.lb_winnerMessage);
             this.group_winner.Controls.Add(this.pictureBox7);
             this.group_winner.Location = new System.Drawing.Point(-2, -9);
             this.group_winner.Name = "group_winner";
@@ -517,6 +529,15 @@
             this.group_winner.TabIndex = 12;
             this.group_winner.TabStop = false;
             this.group_winner.Visible = false;
+            // 
+            // lb_winnerWord
+            // 
+            this.lb_winnerWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_winnerWord.Location = new System.Drawing.Point(102, 323);
+            this.lb_winnerWord.Name = "lb_winnerWord";
+            this.lb_winnerWord.Size = new System.Drawing.Size(408, 42);
+            this.lb_winnerWord.TabIndex = 6;
+            this.lb_winnerWord.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bt_winnerVoltar
             // 
@@ -532,15 +553,15 @@
             this.bt_winnerVoltar.UseVisualStyleBackColor = false;
             this.bt_winnerVoltar.Click += new System.EventHandler(this.bt_winnerVoltar_Click);
             // 
-            // label1
+            // lb_winnerMessage
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(14, 189);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(585, 78);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Parabéns, acertaste a palavra!!";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lb_winnerMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_winnerMessage.Location = new System.Drawing.Point(54, 189);
+            this.lb_winnerMessage.Name = "lb_winnerMessage";
+            this.lb_winnerMessage.Size = new System.Drawing.Size(500, 78);
+            this.lb_winnerMessage.TabIndex = 2;
+            this.lb_winnerMessage.Text = "Parabéns, acertaste a palavra!!";
+            this.lb_winnerMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox7
             // 
@@ -554,25 +575,16 @@
             this.pictureBox7.TabIndex = 1;
             this.pictureBox7.TabStop = false;
             // 
-            // lb_winnerWord
-            // 
-            this.lb_winnerWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_winnerWord.Location = new System.Drawing.Point(102, 323);
-            this.lb_winnerWord.Name = "lb_winnerWord";
-            this.lb_winnerWord.Size = new System.Drawing.Size(408, 42);
-            this.lb_winnerWord.TabIndex = 6;
-            this.lb_winnerWord.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(609, 621);
-            this.Controls.Add(this.group_winner);
-            this.Controls.Add(this.group_game);
             this.Controls.Add(this.group_home);
             this.Controls.Add(this.group_options);
             this.Controls.Add(this.group_tutorial);
+            this.Controls.Add(this.group_winner);
+            this.Controls.Add(this.group_game);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
@@ -636,11 +648,12 @@
         private System.Windows.Forms.Label line;
         private System.Windows.Forms.Panel scroll_game;
         private System.Windows.Forms.GroupBox group_winner;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lb_winnerMessage;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Button bt_gameSair;
         private System.Windows.Forms.Button bt_winnerVoltar;
         private System.Windows.Forms.Label lb_winnerWord;
+        private System.Windows.Forms.Label lb_gameStatus;
     }
 }
 
