@@ -19,14 +19,12 @@ namespace Wordle_Tuga
     {
         Random rnd = new Random();
 
-        private readonly List<String> dictionary = new List<String>();
-
         private readonly List<String> four = new List<String>();
         private readonly List<String> five = new List<String>();
         private readonly List<String> six = new List<String>();
         private readonly List<String> seven = new List<String>();
 
-        public List<String> getWordsList (int amountOfLetters)
+        public List<String> getWordsList(int amountOfLetters)
         {
             switch (amountOfLetters)
             {
@@ -39,12 +37,12 @@ namespace Wordle_Tuga
             }
         }
 
-        public bool wordExists (string word)
+        public bool wordExists(string word)
         {
-            return this.dictionary.Contains(word.ToLower());
+            return this.getWordsList(word.Length).Contains(word.ToLower());
         }
 
-        public string randomWord (int amountOfLetters)
+        public string randomWord(int amountOfLetters)
         {
             var getWordsList = this.getWordsList(amountOfLetters);
 
@@ -55,8 +53,8 @@ namespace Wordle_Tuga
         {
             var assembly = Assembly.GetExecutingAssembly();
 
-            using (Stream streamWords = assembly.GetManifestResourceStream("Wordle_Tuga.Resources.words.json"))
-            using (StreamReader reader = new StreamReader(streamWords))
+            using (Stream stream = assembly.GetManifestResourceStream("Wordle_Tuga.Resources.dictionary.json"))
+            using (StreamReader reader = new StreamReader(stream))
             {
                 var words = JsonConvert.DeserializeObject<WordsStruct>(reader.ReadToEnd());
 
@@ -64,17 +62,6 @@ namespace Wordle_Tuga
                 five = words.five;
                 six = words.six;
                 seven = words.seven;
-            }
-
-            using (Stream streamDictionary = assembly.GetManifestResourceStream("Wordle_Tuga.Resources.dictionary.json"))
-            using (StreamReader reader = new StreamReader(streamDictionary))
-            {
-                var jsonDictionary = JsonConvert.DeserializeObject<WordsStruct>(reader.ReadToEnd());
-
-                this.dictionary.AddRange(jsonDictionary.four);
-                this.dictionary.AddRange(jsonDictionary.five);
-                this.dictionary.AddRange(jsonDictionary.six);
-                this.dictionary.AddRange(jsonDictionary.seven);
             }
         }
     }

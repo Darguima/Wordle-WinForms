@@ -23,28 +23,6 @@ This game is the final project created to a subject at my High School. `Wordle T
 1. Install `Newtonsoft.Json` on NuGet.
 
 #### Scripts
-##### `wordsScraper.py`
-
-In order to get a list of common portuguese words I developed a Python script to scrape them from a site.
-
-<img src="./assets/wordsScrapper.png" width="250px"/>
-
-###### Dependencies
-
-```console
-$ pip install unidecode beautifulsoup4
-```
-
-###### Run
-
-```console
-$ python scripts/wordsScraper.py
-```
-
-The  file `scripts/words.json` will be generated with the words JSON.
-
-___
-
 ##### `dictionaryScraper.py`
 
 In order to get a big list of portuguese words I developed a Python script to scrape them from a [dictionary in XML](https://dicionario-aberto.net/recursos).
