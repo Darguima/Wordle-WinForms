@@ -162,6 +162,8 @@ namespace Wordle_Tuga
             gameTime = 0;
             GameTimer.Stop();
 
+            group_statistics.Visible = false;
+
             scroll_game.Controls.Clear();
         }
 
@@ -265,6 +267,24 @@ namespace Wordle_Tuga
             }
 
             return wordCorrect;
+        }
+
+        private void bt_gameStatistics_Click(object sender, EventArgs e)
+        {
+            group_statistics.Visible = !group_statistics.Visible;
+
+            if (group_statistics.Visible)
+            {
+                lb_statsNick.Text = statistics.CurrentNickname;
+
+                lb_statsPlayedGames.Text = $"Jogos Jogados: {statistics.currentPlayer.gamesPlayed}";
+                lb_statsWonGames.Text = $"Jogos Ganhos: {statistics.currentPlayer.gamesWon}";
+                lb_statsTriesAmount.Text = $"Total de Tentativas: {statistics.currentPlayer.totalAmountTries}";
+                lb_statsLostGames.Text = $"Jogos Perdidos: {statistics.currentPlayer.gamesLost}";
+
+                lb_statsWinGamesPercent.Text = $"{(statistics.currentPlayer.gamesWon * 100) / statistics.currentPlayer.gamesPlayed}%";
+                lb_statsLostGamesPercent.Text = $"{(statistics.currentPlayer.gamesLost * 100) / statistics.currentPlayer.gamesPlayed}%";
+            }
         }
 
         private void bt_winnerVoltar_Click(object sender, EventArgs e)

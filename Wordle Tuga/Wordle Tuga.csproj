@@ -107,6 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />
+    <None Include="Resources\statisticsIcon.png" />
     <EmbeddedResource Include="Resources\dictionary.json" />
     <None Include="Resources\favicon.png" />
     <None Include="Resources\tutorialImage3.png" />
