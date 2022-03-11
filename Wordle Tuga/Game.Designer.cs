@@ -31,14 +31,27 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
             this.group_home = new System.Windows.Forms.GroupBox();
             this.lbl_1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bt_homeTutorial = new System.Windows.Forms.Button();
             this.txt_nickname = new System.Windows.Forms.TextBox();
             this.bt_homeStart = new System.Windows.Forms.Button();
             this.group_game = new System.Windows.Forms.GroupBox();
+            this.bt_gameStatistics = new System.Windows.Forms.PictureBox();
             this.lb_gameStatus = new System.Windows.Forms.Label();
             this.bt_gameSair = new System.Windows.Forms.Button();
-            this.scroll_game = new System.Windows.Forms.Panel();
             this.line = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.scroll_game = new System.Windows.Forms.Panel();
+            this.group_statistics = new System.Windows.Forms.GroupBox();
+            this.lb_statsLostGamesPercent = new System.Windows.Forms.Label();
+            this.lb_statsWinGamesPercent = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lb_statsLostGames = new System.Windows.Forms.Label();
+            this.lb_statsTriesAmount = new System.Windows.Forms.Label();
+            this.lb_statsWonGames = new System.Windows.Forms.Label();
+            this.lb_statsPlayedGames = new System.Windows.Forms.Label();
+            this.lb_statsNick = new System.Windows.Forms.Label();
             this.group_options = new System.Windows.Forms.GroupBox();
             this.radio_optionsTempo = new System.Windows.Forms.RadioButton();
             this.radio_optionsTentativas = new System.Windows.Forms.RadioButton();
@@ -47,53 +60,41 @@
             this.num_optionsLetras = new System.Windows.Forms.NumericUpDown();
             this.num_optionsTentativas = new System.Windows.Forms.NumericUpDown();
             this.bt_optionsStart = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.bt_optionsSair = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.group_tutorial = new System.Windows.Forms.GroupBox();
             this.bt_tutorialSair = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.group_winner = new System.Windows.Forms.GroupBox();
-            this.lb_winnerWord = new System.Windows.Forms.Label();
+            this.lb_winnerMessage_1 = new System.Windows.Forms.Label();
             this.bt_winnerVoltar = new System.Windows.Forms.Button();
-            this.lb_winnerMessage = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lb_winnerMessage_2 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.group_statistics = new System.Windows.Forms.GroupBox();
-            this.lb_statsNick = new System.Windows.Forms.Label();
-            this.lb_statsPlayedGames = new System.Windows.Forms.Label();
-            this.lb_statsWonGames = new System.Windows.Forms.Label();
-            this.lb_statsTriesAmount = new System.Windows.Forms.Label();
-            this.lb_statsLostGames = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lb_statsWinGamesPercent = new System.Windows.Forms.Label();
-            this.lb_statsLostGamesPercent = new System.Windows.Forms.Label();
-            this.bt_gameStatistics = new System.Windows.Forms.PictureBox();
+            this.panel_winnerWord = new System.Windows.Forms.Panel();
             this.group_home.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.group_game.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bt_gameStatistics)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.group_statistics.SuspendLayout();
             this.group_options.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_optionsLetras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_optionsTentativas)).BeginInit();
-            this.group_tutorial.SuspendLayout();
-            this.group_winner.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.group_tutorial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.group_winner.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.group_statistics.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bt_gameStatistics)).BeginInit();
             this.SuspendLayout();
             // 
             // group_home
@@ -122,6 +123,18 @@
             this.lbl_1.TabIndex = 4;
             this.lbl_1.Text = "Nickname";
             this.lbl_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::Wordle_Tuga.Properties.Resources.wordleLogo;
+            this.pictureBox1.Location = new System.Drawing.Point(14, 21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(585, 165);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // bt_homeTutorial
             // 
@@ -173,8 +186,8 @@
             this.group_game.Controls.Add(this.bt_gameSair);
             this.group_game.Controls.Add(this.line);
             this.group_game.Controls.Add(this.pictureBox3);
-            this.group_game.Controls.Add(this.group_statistics);
             this.group_game.Controls.Add(this.scroll_game);
+            this.group_game.Controls.Add(this.group_statistics);
             this.group_game.Location = new System.Drawing.Point(-2, -9);
             this.group_game.Name = "group_game";
             this.group_game.Size = new System.Drawing.Size(612, 639);
@@ -182,6 +195,18 @@
             this.group_game.TabStop = false;
             this.group_game.Visible = false;
             this.group_game.VisibleChanged += new System.EventHandler(this.group_game_VisibleChanged);
+            // 
+            // bt_gameStatistics
+            // 
+            this.bt_gameStatistics.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.bt_gameStatistics.Image = global::Wordle_Tuga.Properties.Resources.statisticsIcon;
+            this.bt_gameStatistics.Location = new System.Drawing.Point(489, 20);
+            this.bt_gameStatistics.Name = "bt_gameStatistics";
+            this.bt_gameStatistics.Size = new System.Drawing.Size(36, 36);
+            this.bt_gameStatistics.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bt_gameStatistics.TabIndex = 15;
+            this.bt_gameStatistics.TabStop = false;
+            this.bt_gameStatistics.Click += new System.EventHandler(this.bt_gameStatistics_Click);
             // 
             // lb_gameStatus
             // 
@@ -207,6 +232,26 @@
             this.bt_gameSair.UseVisualStyleBackColor = false;
             this.bt_gameSair.Click += new System.EventHandler(this.bt_gameSair_Click);
             // 
+            // line
+            // 
+            this.line.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.line.Location = new System.Drawing.Point(54, 71);
+            this.line.Name = "line";
+            this.line.Size = new System.Drawing.Size(500, 2);
+            this.line.TabIndex = 2;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.Image = global::Wordle_Tuga.Properties.Resources.favicon;
+            this.pictureBox3.Location = new System.Drawing.Point(6, 19);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(600, 38);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
             // scroll_game
             // 
             this.scroll_game.AutoScroll = true;
@@ -215,13 +260,114 @@
             this.scroll_game.Size = new System.Drawing.Size(500, 542);
             this.scroll_game.TabIndex = 3;
             // 
-            // line
+            // group_statistics
             // 
-            this.line.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.line.Location = new System.Drawing.Point(54, 71);
-            this.line.Name = "line";
-            this.line.Size = new System.Drawing.Size(500, 2);
-            this.line.TabIndex = 2;
+            this.group_statistics.Controls.Add(this.lb_statsLostGamesPercent);
+            this.group_statistics.Controls.Add(this.lb_statsWinGamesPercent);
+            this.group_statistics.Controls.Add(this.label9);
+            this.group_statistics.Controls.Add(this.label1);
+            this.group_statistics.Controls.Add(this.lb_statsLostGames);
+            this.group_statistics.Controls.Add(this.lb_statsTriesAmount);
+            this.group_statistics.Controls.Add(this.lb_statsWonGames);
+            this.group_statistics.Controls.Add(this.lb_statsPlayedGames);
+            this.group_statistics.Controls.Add(this.lb_statsNick);
+            this.group_statistics.Location = new System.Drawing.Point(54, 76);
+            this.group_statistics.Name = "group_statistics";
+            this.group_statistics.Size = new System.Drawing.Size(500, 542);
+            this.group_statistics.TabIndex = 14;
+            this.group_statistics.TabStop = false;
+            this.group_statistics.Text = "Statistics";
+            this.group_statistics.Visible = false;
+            // 
+            // lb_statsLostGamesPercent
+            // 
+            this.lb_statsLostGamesPercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_statsLostGamesPercent.Location = new System.Drawing.Point(376, 408);
+            this.lb_statsLostGamesPercent.Name = "lb_statsLostGamesPercent";
+            this.lb_statsLostGamesPercent.Size = new System.Drawing.Size(80, 80);
+            this.lb_statsLostGamesPercent.TabIndex = 8;
+            this.lb_statsLostGamesPercent.Text = "xx%";
+            this.lb_statsLostGamesPercent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lb_statsWinGamesPercent
+            // 
+            this.lb_statsWinGamesPercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_statsWinGamesPercent.Location = new System.Drawing.Point(48, 408);
+            this.lb_statsWinGamesPercent.Name = "lb_statsWinGamesPercent";
+            this.lb_statsWinGamesPercent.Size = new System.Drawing.Size(80, 80);
+            this.lb_statsWinGamesPercent.TabIndex = 7;
+            this.lb_statsWinGamesPercent.Text = "xx%";
+            this.lb_statsWinGamesPercent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(376, 329);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(80, 80);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Perdas";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(48, 334);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 80);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Ganhos";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lb_statsLostGames
+            // 
+            this.lb_statsLostGames.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_statsLostGames.Location = new System.Drawing.Point(2, 213);
+            this.lb_statsLostGames.Name = "lb_statsLostGames";
+            this.lb_statsLostGames.Size = new System.Drawing.Size(491, 43);
+            this.lb_statsLostGames.TabIndex = 4;
+            this.lb_statsLostGames.Text = "Jogos Perdidos: ";
+            this.lb_statsLostGames.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lb_statsTriesAmount
+            // 
+            this.lb_statsTriesAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_statsTriesAmount.Location = new System.Drawing.Point(2, 176);
+            this.lb_statsTriesAmount.Name = "lb_statsTriesAmount";
+            this.lb_statsTriesAmount.Size = new System.Drawing.Size(491, 43);
+            this.lb_statsTriesAmount.TabIndex = 3;
+            this.lb_statsTriesAmount.Text = "Total de Tentativas: ";
+            this.lb_statsTriesAmount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lb_statsWonGames
+            // 
+            this.lb_statsWonGames.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_statsWonGames.Location = new System.Drawing.Point(2, 133);
+            this.lb_statsWonGames.Name = "lb_statsWonGames";
+            this.lb_statsWonGames.Size = new System.Drawing.Size(491, 43);
+            this.lb_statsWonGames.TabIndex = 2;
+            this.lb_statsWonGames.Text = "Jogos Ganhos: ";
+            this.lb_statsWonGames.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lb_statsPlayedGames
+            // 
+            this.lb_statsPlayedGames.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_statsPlayedGames.Location = new System.Drawing.Point(2, 92);
+            this.lb_statsPlayedGames.Name = "lb_statsPlayedGames";
+            this.lb_statsPlayedGames.Size = new System.Drawing.Size(491, 43);
+            this.lb_statsPlayedGames.TabIndex = 1;
+            this.lb_statsPlayedGames.Text = "Jogos Jogados: ";
+            this.lb_statsPlayedGames.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lb_statsNick
+            // 
+            this.lb_statsNick.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_statsNick.Location = new System.Drawing.Point(6, 17);
+            this.lb_statsNick.Name = "lb_statsNick";
+            this.lb_statsNick.Size = new System.Drawing.Size(488, 40);
+            this.lb_statsNick.TabIndex = 0;
+            this.lb_statsNick.Text = "Nickname";
+            this.lb_statsNick.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // group_options
             // 
@@ -359,6 +505,18 @@
             this.bt_optionsStart.UseVisualStyleBackColor = false;
             this.bt_optionsStart.Click += new System.EventHandler(this.bt_optionsStart_Click);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.Image = global::Wordle_Tuga.Properties.Resources.wordleLogo;
+            this.pictureBox4.Location = new System.Drawing.Point(14, 21);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(585, 165);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 6;
+            this.pictureBox4.TabStop = false;
+            // 
             // bt_optionsSair
             // 
             this.bt_optionsSair.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -418,6 +576,36 @@
             this.bt_tutorialSair.UseVisualStyleBackColor = false;
             this.bt_tutorialSair.Click += new System.EventHandler(this.bt_tutorialSair_Click);
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Wordle_Tuga.Properties.Resources.tutorialImage3;
+            this.pictureBox6.Location = new System.Drawing.Point(33, 533);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(317, 50);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 9;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::Wordle_Tuga.Properties.Resources.tutorialImage2;
+            this.pictureBox5.Location = new System.Drawing.Point(33, 410);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(317, 50);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 8;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Wordle_Tuga.Properties.Resources.tutorialImage1;
+            this.pictureBox2.Location = new System.Drawing.Point(33, 290);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(317, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            // 
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -468,10 +656,11 @@
             // group_winner
             // 
             this.group_winner.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.group_winner.Controls.Add(this.lb_winnerWord);
+            this.group_winner.Controls.Add(this.lb_winnerMessage_1);
             this.group_winner.Controls.Add(this.bt_winnerVoltar);
-            this.group_winner.Controls.Add(this.lb_winnerMessage);
+            this.group_winner.Controls.Add(this.lb_winnerMessage_2);
             this.group_winner.Controls.Add(this.pictureBox7);
+            this.group_winner.Controls.Add(this.panel_winnerWord);
             this.group_winner.Location = new System.Drawing.Point(-2, -9);
             this.group_winner.Name = "group_winner";
             this.group_winner.Size = new System.Drawing.Size(612, 639);
@@ -479,14 +668,15 @@
             this.group_winner.TabStop = false;
             this.group_winner.Visible = false;
             // 
-            // lb_winnerWord
+            // lb_winnerMessage_1
             // 
-            this.lb_winnerWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_winnerWord.Location = new System.Drawing.Point(102, 323);
-            this.lb_winnerWord.Name = "lb_winnerWord";
-            this.lb_winnerWord.Size = new System.Drawing.Size(408, 42);
-            this.lb_winnerWord.TabIndex = 6;
-            this.lb_winnerWord.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lb_winnerMessage_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_winnerMessage_1.Location = new System.Drawing.Point(54, 201);
+            this.lb_winnerMessage_1.Name = "lb_winnerMessage_1";
+            this.lb_winnerMessage_1.Size = new System.Drawing.Size(500, 78);
+            this.lb_winnerMessage_1.TabIndex = 7;
+            this.lb_winnerMessage_1.Text = "Parabéns / Perdeste";
+            this.lb_winnerMessage_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bt_winnerVoltar
             // 
@@ -502,81 +692,15 @@
             this.bt_winnerVoltar.UseVisualStyleBackColor = false;
             this.bt_winnerVoltar.Click += new System.EventHandler(this.bt_winnerVoltar_Click);
             // 
-            // lb_winnerMessage
+            // lb_winnerMessage_2
             // 
-            this.lb_winnerMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_winnerMessage.Location = new System.Drawing.Point(54, 189);
-            this.lb_winnerMessage.Name = "lb_winnerMessage";
-            this.lb_winnerMessage.Size = new System.Drawing.Size(500, 78);
-            this.lb_winnerMessage.TabIndex = 2;
-            this.lb_winnerMessage.Text = "Parabéns, acertaste a palavra!!";
-            this.lb_winnerMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Image = global::Wordle_Tuga.Properties.Resources.favicon;
-            this.pictureBox3.Location = new System.Drawing.Point(6, 19);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(600, 38);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::Wordle_Tuga.Properties.Resources.wordleLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(14, 21);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(585, 165);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.Image = global::Wordle_Tuga.Properties.Resources.wordleLogo;
-            this.pictureBox4.Location = new System.Drawing.Point(14, 21);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(585, 165);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 6;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::Wordle_Tuga.Properties.Resources.tutorialImage3;
-            this.pictureBox6.Location = new System.Drawing.Point(33, 533);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(317, 50);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 9;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::Wordle_Tuga.Properties.Resources.tutorialImage2;
-            this.pictureBox5.Location = new System.Drawing.Point(33, 410);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(317, 50);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 8;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Wordle_Tuga.Properties.Resources.tutorialImage1;
-            this.pictureBox2.Location = new System.Drawing.Point(33, 290);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(317, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
+            this.lb_winnerMessage_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_winnerMessage_2.Location = new System.Drawing.Point(54, 287);
+            this.lb_winnerMessage_2.Name = "lb_winnerMessage_2";
+            this.lb_winnerMessage_2.Size = new System.Drawing.Size(500, 78);
+            this.lb_winnerMessage_2.TabIndex = 2;
+            this.lb_winnerMessage_2.Text = "Score do Jogo";
+            this.lb_winnerMessage_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox7
             // 
@@ -590,126 +714,13 @@
             this.pictureBox7.TabIndex = 1;
             this.pictureBox7.TabStop = false;
             // 
-            // group_statistics
+            // panel_winnerWord
             // 
-            this.group_statistics.Controls.Add(this.lb_statsLostGamesPercent);
-            this.group_statistics.Controls.Add(this.lb_statsWinGamesPercent);
-            this.group_statistics.Controls.Add(this.label9);
-            this.group_statistics.Controls.Add(this.label1);
-            this.group_statistics.Controls.Add(this.lb_statsLostGames);
-            this.group_statistics.Controls.Add(this.lb_statsTriesAmount);
-            this.group_statistics.Controls.Add(this.lb_statsWonGames);
-            this.group_statistics.Controls.Add(this.lb_statsPlayedGames);
-            this.group_statistics.Controls.Add(this.lb_statsNick);
-            this.group_statistics.Location = new System.Drawing.Point(54, 76);
-            this.group_statistics.Name = "group_statistics";
-            this.group_statistics.Size = new System.Drawing.Size(500, 542);
-            this.group_statistics.TabIndex = 14;
-            this.group_statistics.TabStop = false;
-            this.group_statistics.Text = "Statistics";
-            this.group_statistics.Visible = false;
-            // 
-            // lb_statsNick
-            // 
-            this.lb_statsNick.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_statsNick.Location = new System.Drawing.Point(6, 17);
-            this.lb_statsNick.Name = "lb_statsNick";
-            this.lb_statsNick.Size = new System.Drawing.Size(488, 40);
-            this.lb_statsNick.TabIndex = 0;
-            this.lb_statsNick.Text = "Nickname";
-            this.lb_statsNick.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lb_statsPlayedGames
-            // 
-            this.lb_statsPlayedGames.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_statsPlayedGames.Location = new System.Drawing.Point(2, 92);
-            this.lb_statsPlayedGames.Name = "lb_statsPlayedGames";
-            this.lb_statsPlayedGames.Size = new System.Drawing.Size(491, 43);
-            this.lb_statsPlayedGames.TabIndex = 1;
-            this.lb_statsPlayedGames.Text = "Jogos Jogados: ";
-            this.lb_statsPlayedGames.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lb_statsWonGames
-            // 
-            this.lb_statsWonGames.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_statsWonGames.Location = new System.Drawing.Point(2, 133);
-            this.lb_statsWonGames.Name = "lb_statsWonGames";
-            this.lb_statsWonGames.Size = new System.Drawing.Size(491, 43);
-            this.lb_statsWonGames.TabIndex = 2;
-            this.lb_statsWonGames.Text = "Jogos Ganhos: ";
-            this.lb_statsWonGames.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lb_statsTriesAmount
-            // 
-            this.lb_statsTriesAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_statsTriesAmount.Location = new System.Drawing.Point(2, 176);
-            this.lb_statsTriesAmount.Name = "lb_statsTriesAmount";
-            this.lb_statsTriesAmount.Size = new System.Drawing.Size(491, 43);
-            this.lb_statsTriesAmount.TabIndex = 3;
-            this.lb_statsTriesAmount.Text = "Total de Tentativas: ";
-            this.lb_statsTriesAmount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lb_statsLostGames
-            // 
-            this.lb_statsLostGames.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_statsLostGames.Location = new System.Drawing.Point(2, 213);
-            this.lb_statsLostGames.Name = "lb_statsLostGames";
-            this.lb_statsLostGames.Size = new System.Drawing.Size(491, 43);
-            this.lb_statsLostGames.TabIndex = 4;
-            this.lb_statsLostGames.Text = "Jogos Perdidos: ";
-            this.lb_statsLostGames.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(48, 334);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 80);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Ganhos";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label9
-            // 
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(376, 329);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 80);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "Perdas";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lb_statsWinGamesPercent
-            // 
-            this.lb_statsWinGamesPercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_statsWinGamesPercent.Location = new System.Drawing.Point(48, 408);
-            this.lb_statsWinGamesPercent.Name = "lb_statsWinGamesPercent";
-            this.lb_statsWinGamesPercent.Size = new System.Drawing.Size(80, 80);
-            this.lb_statsWinGamesPercent.TabIndex = 7;
-            this.lb_statsWinGamesPercent.Text = "xx%";
-            this.lb_statsWinGamesPercent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lb_statsLostGamesPercent
-            // 
-            this.lb_statsLostGamesPercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_statsLostGamesPercent.Location = new System.Drawing.Point(376, 408);
-            this.lb_statsLostGamesPercent.Name = "lb_statsLostGamesPercent";
-            this.lb_statsLostGamesPercent.Size = new System.Drawing.Size(80, 80);
-            this.lb_statsLostGamesPercent.TabIndex = 8;
-            this.lb_statsLostGamesPercent.Text = "xx%";
-            this.lb_statsLostGamesPercent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bt_gameStatistics
-            // 
-            this.bt_gameStatistics.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.bt_gameStatistics.Image = global::Wordle_Tuga.Properties.Resources.statisticsIcon;
-            this.bt_gameStatistics.Location = new System.Drawing.Point(489, 20);
-            this.bt_gameStatistics.Name = "bt_gameStatistics";
-            this.bt_gameStatistics.Size = new System.Drawing.Size(36, 36);
-            this.bt_gameStatistics.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bt_gameStatistics.TabIndex = 15;
-            this.bt_gameStatistics.TabStop = false;
-            this.bt_gameStatistics.Click += new System.EventHandler(this.bt_gameStatistics_Click);
+            this.panel_winnerWord.AutoScroll = true;
+            this.panel_winnerWord.Location = new System.Drawing.Point(56, 410);
+            this.panel_winnerWord.Name = "panel_winnerWord";
+            this.panel_winnerWord.Size = new System.Drawing.Size(500, 80);
+            this.panel_winnerWord.TabIndex = 8;
             // 
             // Game
             // 
@@ -731,23 +742,23 @@
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             this.group_home.ResumeLayout(false);
             this.group_home.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.group_game.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bt_gameStatistics)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.group_statistics.ResumeLayout(false);
             this.group_options.ResumeLayout(false);
             this.group_options.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_optionsLetras)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_optionsTentativas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.group_tutorial.ResumeLayout(false);
             this.group_tutorial.PerformLayout();
-            this.group_winner.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.group_winner.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.group_statistics.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bt_gameStatistics)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -786,11 +797,10 @@
         private System.Windows.Forms.Label line;
         private System.Windows.Forms.Panel scroll_game;
         private System.Windows.Forms.GroupBox group_winner;
-        private System.Windows.Forms.Label lb_winnerMessage;
+        private System.Windows.Forms.Label lb_winnerMessage_2;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Button bt_gameSair;
         private System.Windows.Forms.Button bt_winnerVoltar;
-        private System.Windows.Forms.Label lb_winnerWord;
         private System.Windows.Forms.Label lb_gameStatus;
         private System.Windows.Forms.GroupBox group_statistics;
         private System.Windows.Forms.Label lb_statsNick;
@@ -803,6 +813,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox bt_gameStatistics;
+        private System.Windows.Forms.Label lb_winnerMessage_1;
+        private System.Windows.Forms.Panel panel_winnerWord;
     }
 }
 

@@ -105,7 +105,7 @@ namespace Wordle_Tuga
                     lb_gameStatus.Text = $"Tentativas: {triedWords.Count} / {triesAmount}";    
                 }
 
-                MessageBox.Show($"Palavra Certa: {winnerWord}");
+                //MessageBox.Show($"Palavra Certa: {winnerWord}");
                 generateNewWordTry();
             }
         }
@@ -208,13 +208,19 @@ namespace Wordle_Tuga
 
                             if (wordCorrect)
                             {
-                                lb_winnerMessage.Text = isTimeGame
-                                ?  $"Parabéns, acertaste em {String.Format("{0:0.00}", gameTime / 600)} segundos e {triedWords.Count + 1} tentativas!!!" 
-                                : $"Parabéns, acertaste em {triedWords.Count + 1} tentativas!!!";
+                                lb_winnerMessage_1.Text = "Parabéns";
+                                lb_winnerMessage_1.ForeColor = Color.FromArgb(107, 170, 100);
+
+                                lb_winnerMessage_2.Text = isTimeGame
+                                ?  $"Ganhaste em {String.Format("{0:0.00}", gameTime / 600)} segundos com {triedWords.Count + 1} tentativas!!!" 
+                                : $"Ganhaste em {triedWords.Count + 1} tentativas!!!";
                             }
                             else if (!isTimeGame && triesAmount == triedWords.Count + 1)
                             {
-                                lb_winnerMessage.Text = $"Perdeste, excedeste as tuas {triesAmount} tentativas!!!";
+                                lb_winnerMessage_1.Text = "Perdeste";
+                                lb_winnerMessage_1.ForeColor = Color.Red;
+
+                                lb_winnerMessage_2.Text = $"Excedeste as tuas {triesAmount} tentativas!!!";
                             }
                             else
                             {
@@ -223,10 +229,19 @@ namespace Wordle_Tuga
                                 generateNewWordTry();
                                 return;
                             }
-
-                            lb_winnerWord.Text = $"Palavra certa: {winnerWord}";
-
+                            
                             GameTimer.Stop();
+
+                            panel_winnerWord.Controls.Clear();
+                            int i = 0;
+                            currentLabelsTry.ForEach(label => {
+                                label.Top = 0;
+                                label.Text = winnerWord[i].ToString();
+                                label.BackColor = Color.FromArgb(107, 170, 100);
+
+                                panel_winnerWord.Controls.Add(label);
+                                i++;
+                            });
 
                             statistics.storeGame(wordCorrect, triedWords.Count + 1);
 
@@ -272,6 +287,7 @@ namespace Wordle_Tuga
         private void bt_gameStatistics_Click(object sender, EventArgs e)
         {
             group_statistics.Visible = !group_statistics.Visible;
+            scroll_game.Visible = !scroll_game.Visible;
 
             if (group_statistics.Visible)
             {
