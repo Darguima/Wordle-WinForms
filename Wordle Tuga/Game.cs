@@ -163,6 +163,7 @@ namespace Wordle_Tuga
             GameTimer.Stop();
 
             group_statistics.Visible = false;
+            scroll_game.Visible = true;
 
             scroll_game.Controls.Clear();
         }
