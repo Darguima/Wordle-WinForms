@@ -79,6 +79,10 @@
             this.lb_winnerMessage_2 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel_winnerWord = new System.Windows.Forms.Panel();
+            this.link_darguima = new System.Windows.Forms.LinkLabel();
+            this.link_zaga = new System.Windows.Forms.LinkLabel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.group_home.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.group_game.SuspendLayout();
@@ -102,6 +106,10 @@
             this.group_home.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.group_home.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.group_home.Controls.Add(this.label11);
+            this.group_home.Controls.Add(this.label10);
+            this.group_home.Controls.Add(this.link_zaga);
+            this.group_home.Controls.Add(this.link_darguima);
             this.group_home.Controls.Add(this.lbl_1);
             this.group_home.Controls.Add(this.pictureBox1);
             this.group_home.Controls.Add(this.bt_homeTutorial);
@@ -722,16 +730,56 @@
             this.panel_winnerWord.Size = new System.Drawing.Size(500, 80);
             this.panel_winnerWord.TabIndex = 8;
             // 
+            // link_darguima
+            // 
+            this.link_darguima.AutoSize = true;
+            this.link_darguima.Location = new System.Drawing.Point(50, 605);
+            this.link_darguima.Name = "link_darguima";
+            this.link_darguima.Size = new System.Drawing.Size(52, 13);
+            this.link_darguima.TabIndex = 5;
+            this.link_darguima.TabStop = true;
+            this.link_darguima.Text = "Darguima";
+            this.link_darguima.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_darguima_LinkClicked);
+            // 
+            // link_zaga
+            // 
+            this.link_zaga.AutoSize = true;
+            this.link_zaga.Location = new System.Drawing.Point(120, 605);
+            this.link_zaga.Name = "link_zaga";
+            this.link_zaga.Size = new System.Drawing.Size(40, 13);
+            this.link_zaga.TabIndex = 6;
+            this.link_zaga.TabStop = true;
+            this.link_zaga.Text = "zzzaga";
+            this.link_zaga.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_zaga_LinkClicked);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(3, 605);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(48, 13);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "Made by";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(101, 605);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(19, 13);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "&&&&";
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(609, 621);
-            this.Controls.Add(this.group_game);
             this.Controls.Add(this.group_home);
             this.Controls.Add(this.group_options);
             this.Controls.Add(this.group_tutorial);
             this.Controls.Add(this.group_winner);
+            this.Controls.Add(this.group_game);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
@@ -815,6 +863,10 @@
         private System.Windows.Forms.PictureBox bt_gameStatistics;
         private System.Windows.Forms.Label lb_winnerMessage_1;
         private System.Windows.Forms.Panel panel_winnerWord;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.LinkLabel link_zaga;
+        private System.Windows.Forms.LinkLabel link_darguima;
     }
 }
 

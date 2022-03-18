@@ -331,5 +331,31 @@ namespace Wordle_Tuga
             group_winner.Visible = false;
             group_home.Visible = true;
         }
+
+        private void link_darguima_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                link_darguima.LinkVisited = true;
+                System.Diagnostics.Process.Start("https://github.com/Darguima/Wordle-WinForms");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Access \"https://github.com/Darguima/Wordle-WinForms\"");
+            }
+        }
+
+        private void link_zaga_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                link_zaga.LinkVisited = true;
+                System.Diagnostics.Process.Start("https://twitter.com/zzzaga_");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Access \"https://twitter.com/zzzaga_\"");
+            }
+        }
     }
 }
