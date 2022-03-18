@@ -258,31 +258,49 @@ namespace Wordle_Tuga
 
         private bool wordScore ()
         {
-            bool wordCorrect = true;
+            var labelsOnWrongPlaceOrWrong = new List<Label>();
+            var charsNotFounded = new List<Char>();
 
             for (int i = 0; i < currentLabelsTry.Count; i++)
             {
                 Label label = currentLabelsTry[i];
                 label.BorderStyle = BorderStyle.None;
 
-
                 if (label.Text == winnerWord[i].ToString())
                 {
                     label.BackColor = Color.FromArgb(107, 170, 100);
                 }
-                else if (winnerWord.Contains(label.Text))
-                {
-                    label.BackColor = Color.FromArgb(201, 180, 88);
-                    wordCorrect = false;
-                }
                 else
                 {
-                    label.BackColor = Color.FromArgb(120, 124, 126);
-                    wordCorrect = false;
+                    labelsOnWrongPlaceOrWrong.Add(label);
+                    charsNotFounded.Add(winnerWord[i]);
                 }
             }
 
-            return wordCorrect;
+            var wrongLabels = new List<Label>();
+
+            for (int i = 0; i < labelsOnWrongPlaceOrWrong.Count; i++)
+            {
+                Label label = labelsOnWrongPlaceOrWrong[i];
+                Char labelChar = label.Text.ToCharArray()[0];
+
+                if (charsNotFounded.Contains(labelChar))
+                {
+                    label.BackColor = Color.FromArgb(201, 180, 88);
+                    charsNotFounded.Remove(labelChar);
+                }
+                else
+                {
+                    wrongLabels.Add(label);
+                }
+            }
+
+            wrongLabels.ForEach(label =>
+            {
+                label.BackColor = Color.FromArgb(120, 124, 126);
+            });
+
+            return labelsOnWrongPlaceOrWrong.Count == 0 && wrongLabels.Count == 0;
         }
 
         private void bt_gameStatistics_Click(object sender, EventArgs e)
